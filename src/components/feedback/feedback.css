@@ -1,0 +1,19 @@
+.feedback {
+  padding: 20px;
+}
+.warpper-buttons {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  padding: 10px;
+}
+.button-state {
+  background-color: #fff;
+  border: 1px solid rgb(192, 191, 191);
+  font-weight: bold;
+  border-radius: 5px;
+  padding: 3px 10px;
+}
+.button-state:active{
+  background-color: rgb(114, 191, 226);
+}
