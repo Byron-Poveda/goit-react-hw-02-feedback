@@ -37,7 +37,7 @@ export default class Statistics extends Component {
               Total:<span> {total}</span>
             </li>
             <li className="statistics__item">
-              Positive Feedback: {total ? <span>{feedback}%</span> : null}
+              Positive Feedback: <span>{feedback}%</span>
             </li>
           </ul>
         )}

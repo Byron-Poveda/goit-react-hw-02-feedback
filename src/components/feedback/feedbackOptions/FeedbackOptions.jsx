@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 
 export default class FeedbackOptions extends Component {
   static propTypes = {
-    options: PropTypes.array,
+    options: PropTypes.object,
     onLeaveFeedback: PropTypes.func,
   };
   static defaultProps = {
@@ -15,7 +15,7 @@ export default class FeedbackOptions extends Component {
     const { options, onLeaveFeedback } = this.props;
     return (
       <div className="warpper-buttons">
-        {options.map(option => (
+        {Object.keys(options).map(option => (
           <button
             key={option}
             onClick={() => onLeaveFeedback(option)}
