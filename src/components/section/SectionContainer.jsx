@@ -1,22 +1,18 @@
+import React from 'react';
 import PropTypes from 'prop-types';
-import React, { Component } from 'react';
 
-export default class SectionContainer extends Component {
-  static propTypes = {
-    title: PropTypes.string,
-    name: PropTypes.string,
-  };
-  static defaultProps = {
-    title: '',
-    PropTypes: '',
-  };
-  render() {
-    const { title, children, name } = this.props;
-    return (
-      <section className={name}>
-        <h1>{title}</h1>
-        {children}
-      </section>
-    );
-  }
+function SectionContainer({ title = '', name = '', children }) {
+  return (
+    <section className={name}>
+      <h1>{title}</h1>
+      {children}
+    </section>
+  );
 }
+
+SectionContainer.propTypes = {
+  title: PropTypes.string,
+  name: PropTypes.string,
+};
+
+export default SectionContainer;
